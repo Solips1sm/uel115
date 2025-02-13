@@ -8,34 +8,127 @@
 </head>
 
 <body>
-    <h1>Commande en ligne</h1>
-        <fieldset>
-            <legend>Etat Civil</legend>
-            <ul>
-                <li> 
-                    <label for="civilmr"> Monsieur
-                        <input type="radio" value="monsieur" name="civil"
-                    </label>
-                </li>
-                <li>
-                    <label for="civilmr"> Monsieur
-                        <input type="radio" value="monsieur" name="civil" </label>
-                </li>
-                <li>
-                    <label for="civilmr"> Monsieur
-                        <input type="radio" value="monsieur" name="civil" </label>
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <legend>Adresse de Facturation </legend>
-        </fieldset>
-        <fieldset>
-            <legend>Adresse de livraison </legend>
-        </fieldset>
-        <br>
-        <input type="submit" value="Envoyer">
+    <main role="main">
+        <!-- went with main role="main" but apparently https://stackoverflow.com/questions/19595719/html5-main-element-versus-aria-landmark-role-main states otherwise-->
+        <h1>Commande en ligne</h1>
+        <div id="content">
+            <form action="http://www.amazonSideShellCorporation.totallyNotAScam/weWillSellYourData/" method="post">
+                <fieldset>
+                    <legend>Etat Civil</legend>
+                    <ul>
+                        <li>
+                            <p>Civilite:</p>
+                        </li>
+                        <li>
+                            <label for="mle">
+                                <input type="radio" value="mademoiselle" name="mle" id="mle">Mlle</label>
+                        </li>
+                        <li>
+                            <label for="mme">
+                                <input type="radio" value="madame" name="mme" id="mme">Madame</label>
+                        </li>
+                        <li>
+                            <label for="msr">
+                                <input type="radio" value="monsieur" name="msr" id="msr">M</label>
+                        </li>
+                    </ul>
+                    <p>
+                        <label for="prenom">Prenom
+                            <input type="text" name="prenom" id="prenom">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="nom">Nom
+                            <input type="text" name="nom" id="nom">
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Adresse de Facturation </legend>
+                    <ul>
+                        <li>
+                            <label for="addressFacture">
+                                Addresse:
+                            </label>
+                            <textarea cols="40" rows="2" id="addressFacture">
+                            </textarea>
+                        </li>
+                        <li>
+                            <label for="villeFacture">Ville :
+                                <input type="text" name="ville" id="villeFacture">
+                            </label>
+                        </li>
+                        <li>
+                            <label for="codePostalFacture">Code postal :
+                                <input type="text" name="codePostal" id="codePostalFacture" pattern="[0-9]*">
+                                <!-- derived from https://css-tricks.com/html-for-zip-codes/ -->
+                            </label>
+                        </li>
+                        <li>
+                            <label for="paysFacture">Pays :
+                                <select name="pays" id="paysFacture">
+                                    <option value="">Choisissez un pays</option>
+                                    <optgroup label="Europe">
+                                        <option value="france">France</option>
+                                        <option value="suisse">Suisse</option>
+                                        <option value="belgique">Belgique</option>
+                                        <option value="italie">Italie</option>
+                                    </optgroup>
+                                    <optgroup label="Asie">
+                                        <option value="chine">Chine</option>
+                                        <option value="japon">Japon</option>
+                                        <option value="inde">Inde</option>
+                                    </optgroup>
+                                </select>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Adresse de livraison </legend>
+                    <ul>
+                        <li>
+                            <label for="addressLivraison">
+                                Addresse:
+                            </label>
+                            <textarea cols="40" rows="2" id="addressLivraison">
+                                                            </textarea>
+                        </li>
+                        <li>
+                            <label for="villeLivraison">Ville :
+                                <input type="text" name="ville" id="villeLivraison">
+                            </label>
+                        </li>
+                        <li>
+                            <label for="codePostalLivraison">Code postal :
+                                <input type="text" name="codePostal" id="codePostalLivraison" pattern="[0-9]*">
+                            </label>
+                        </li>
+                        <li>
+                            <label for="paysLivraison">Pays :
+                                <select name="pays" id="paysLivraison">
+                                    <option value="">Choisissez un pays</option>
+                                    <optgroup label="Europe">
+                                        <option value="france">France</option>
+                                        <option value="suisse">Suisse</option>
+                                        <option value="belgique">Belgique</option>
+                                        <option value="italie">Italie</option>
+                                    </optgroup>
+                                    <optgroup label="Asie">
+                                        <option value="chine">Chine</option>
+                                        <option value="japon">Japon</option>
+                                        <option value="inde">Inde</option>
+                                    </optgroup>
+                                </select>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <input type="submit" value="Envoyer">
+            </form>
         </div>
+    </main>
 </body>
 
 </html>
