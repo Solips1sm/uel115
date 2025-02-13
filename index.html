@@ -4,11 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>Formulaire WCAG</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+        <!-- sorry for the internal css inline declaration - had to be done... -->
+    <style> 
+        ul {
+            list-style-type: none;
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        p {
+            margin: 2px;
+        }
+
+        h1 {
+            font-family: Georgia;
+        }
+    </style>
 </head>
 
+
 <body>
-    <main role="main">
+    <main>
         <!-- went with main role="main" but apparently https://stackoverflow.com/questions/19595719/html5-main-element-versus-aria-landmark-role-main states otherwise-->
         <h1>Commande en ligne</h1>
         <div id="content">
@@ -34,12 +50,12 @@
                     </ul>
                     <p>
                         <label for="prenom">Prenom
-                            <input type="text" name="prenom" id="prenom">
+                            <input type="text" name="prenom" id="prenom" required>
                         </label>
                     </p>
                     <p>
                         <label for="nom">Nom
-                            <input type="text" name="nom" id="nom">
+                            <input type="text" name="nom" id="nom" required>
                         </label>
                     </p>
                 </fieldset>
@@ -50,23 +66,23 @@
                             <label for="addressFacture">
                                 Addresse:
                             </label>
-                            <textarea cols="40" rows="2" id="addressFacture">
+                            <textarea cols="40" rows="2" id="addressFacture" required>
                             </textarea>
                         </li>
                         <li>
                             <label for="villeFacture">Ville :
-                                <input type="text" name="ville" id="villeFacture">
+                                <input type="text" name="ville" id="villeFacture" required>
                             </label>
                         </li>
                         <li>
                             <label for="codePostalFacture">Code postal :
-                                <input type="text" name="codePostal" id="codePostalFacture" pattern="[0-9]*">
+                                <input type="text" name="codePostal" id="codePostalFacture" required pattern="[0-9]*">
                                 <!-- derived from https://css-tricks.com/html-for-zip-codes/ -->
                             </label>
                         </li>
                         <li>
                             <label for="paysFacture">Pays :
-                                <select name="pays" id="paysFacture">
+                                <select name="pays" id="paysFacture" required>
                                     <option value="">Choisissez un pays</option>
                                     <optgroup label="Europe">
                                         <option value="france">France</option>
@@ -91,22 +107,22 @@
                             <label for="addressLivraison">
                                 Addresse:
                             </label>
-                            <textarea cols="40" rows="2" id="addressLivraison">
+                            <textarea cols="40" rows="2" id="addressLivraison" required>
                                                             </textarea>
                         </li>
                         <li>
                             <label for="villeLivraison">Ville :
-                                <input type="text" name="ville" id="villeLivraison">
+                                <input type="text" name="ville" id="villeLivraison" required>
                             </label>
                         </li>
                         <li>
                             <label for="codePostalLivraison">Code postal :
-                                <input type="text" name="codePostal" id="codePostalLivraison" pattern="[0-9]*">
+                                <input type="text" name="codePostal" id="codePostalLivraison" required pattern="[0-9]*">
                             </label>
                         </li>
                         <li>
                             <label for="paysLivraison">Pays :
-                                <select name="pays" id="paysLivraison">
+                                <select name="pays" id="paysLivraison" required>
                                     <option value="">Choisissez un pays</option>
                                     <optgroup label="Europe">
                                         <option value="france">France</option>
