@@ -35,17 +35,19 @@
                         <li>
                             <p>Civilité:</p>
                         </li>
+                        <!-- if the inputs share same name, only one radio can be toggled at once, almost lost points here ; ) -->
+                        <!-- also http://www.w3schools.com/Tags/att_input_name.asp did not know that ones with no name att are not sent as form data-->
                         <li>
                             <label for="mle">
-                                <input type="radio" value="mademoiselle" name="mle" id="mle">Mlle</label>
+                                <input type="radio" value="mademoiselle" name="civil" id="mle" required>Mlle</label>
                         </li>
                         <li>
                             <label for="mme">
-                                <input type="radio" value="madame" name="mme" id="mme">Madame</label>
+                                <input type="radio" value="madame" name="civil" id="mme" required>Madame</label>
                         </li>
                         <li>
                             <label for="msr">
-                                <input type="radio" value="monsieur" name="msr" id="msr">M</label>
+                                <input type="radio" value="monsieur" name="civil" id="msr" required>M</label>
                         </li>
                     </ul>
                     <p>
@@ -64,19 +66,19 @@
                     <ul>
                         <li>
                             <label for="addressFacture">
-                                Addresse:
+                                Adresse:
                             </label>
-                            <textarea cols="40" rows="2" id="addressFacture" required>
+                            <textarea cols="40" rows="2" id="addressFacture" name="addressFacture" required>
                             </textarea>
                         </li>
                         <li>
                             <label for="villeFacture">Ville :
-                                <input type="text" name="ville" id="villeFacture" required>
+                                <input type="text" name="villeFacture" id="villeFacture" required>
                             </label>
                         </li>
                         <li>
                             <label for="codePostalFacture">Code postal :
-                                <input type="text" name="codePostal" id="codePostalFacture" required pattern="[0-9]*">
+                                <input type="text" name="codePostalFacture" id="codePostalFacture" required pattern="[0-9]*">
                                 <!-- derived from https://css-tricks.com/html-for-zip-codes/ -->
                             </label>
                         </li>
@@ -105,19 +107,19 @@
                     <ul>
                         <li>
                             <label for="addressLivraison">
-                                Addresse:
+                                Adresse:
                             </label>
-                            <textarea cols="40" rows="2" id="addressLivraison" required>
+                            <textarea cols="40" rows="2" id="addressLivraison" name="address" required>
                                                             </textarea>
                         </li>
                         <li>
                             <label for="villeLivraison">Ville :
-                                <input type="text" name="ville" id="villeLivraison" required>
+                                <input type="text" name="villeLivraison" id="villeLivraison" required>
                             </label>
                         </li>
                         <li>
                             <label for="codePostalLivraison">Code postal :
-                                <input type="text" name="codePostal" id="codePostalLivraison" required pattern="[0-9]*">
+                                <input type="text" name="codePostalLivraison" id="codePostalLivraison" required pattern="[0-9]*">
                             </label>
                         </li>
                         <li>
